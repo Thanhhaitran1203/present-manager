@@ -1,34 +1,20 @@
 package com.present.model;
 
-import net.bytebuddy.implementation.bind.annotation.Default;
 import org.hibernate.annotations.ColumnDefault;
+import org.springframework.web.multipart.MultipartFile;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "present")
-public class Present {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class PresentForm {
     private int id;
     private String code;
     private String name;
     private int price;
     private int ship;
-    private String img;
+    private MultipartFile img;
 
-    public Present() {
+    public PresentForm() {
     }
 
-    public Present(int id, String code, String name, int price, int ship) {
-        this.id = id;
-        this.code = code;
-        this.name = name;
-        this.price = price;
-        this.ship = ship;
-    }
-
-    public Present(int id, String code, String name, int price, int ship, String img) {
+    public PresentForm(int id, String code, String name, int price, int ship, MultipartFile img) {
         this.id = id;
         this.code = code;
         this.name = name;
@@ -77,11 +63,11 @@ public class Present {
         this.ship = ship;
     }
 
-    public String getImg() {
+    public MultipartFile getImg() {
         return img;
     }
 
-    public void setImg(String img) {
+    public void setImg(MultipartFile img) {
         this.img = img;
     }
 }

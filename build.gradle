@@ -34,7 +34,9 @@ dependencies {
     // https://mvnrepository.com/artifact/mysql/mysql-connector-java
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
     // https://mvnrepository.com/artifact/org.hibernate/hibernate-core
-    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.6.10.Final'}
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.6.10.Final'
+    implementation group: 'commons-fileupload', name: 'commons-fileupload', version: '1.4'
+}
 
 
 test {
